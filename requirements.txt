@@ -1,6 +1,5 @@
 numpy
 pandas
-sklearn
 mlflow
 matplotlib
 seaborn
