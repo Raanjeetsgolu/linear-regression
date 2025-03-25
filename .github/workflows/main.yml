@@ -21,7 +21,11 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install nbconvert nbformat
+          pip install nbconvert nbformat ipykernel
+          python -m ipykernel install --user --name python3 --display-name "Python 3"
+
+      - name: List Jupyter Kernels
+        run: jupyter kernelspec list  # This will help verify if the kernel was installed correctly
 
       - name: Execute Jupyter Notebook
         run: |
